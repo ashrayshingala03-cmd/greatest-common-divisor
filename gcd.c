@@ -1,12 +1,12 @@
 #include<stdio.h>
 int main() {
-  it a,b, temp;
+  int a,b,i, gcd=1;
 printf("enter 2 no.s:");
 scanf("%d %d, &a, &b");
-while(b!=0){
-temp=b;
-b=a%b;
-a=temp;
+for(i=1; i<=a && i<=b; i++) {
+  if(a%i==0 && b%i==0) {
+  gcd=i;
+}
 }
 printf("GCD is: %d\n", a);
 return 0;
